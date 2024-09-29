@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "test A",
+    "author": "A",
+    "genre": "Fiction",
+    "publishedYear": 1,
+    "availability": true
+  },
+  {
+    "id": 2,
+    "title": "test B",
+    "author": "B",
+    "genre": "Science",
+    "publishedYear": 4,
+    "availability": false
+  }
+]

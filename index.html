@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Mini Project</h1>
+
+    <div class="container">
+      <div class="add-book-section">
+        <div id="addBookSection" class="add-book-section">
+          <h2><div id="message2"></div></h2>
+          <input type="text" id="title" placeholder="Title" />
+          <input type="text" id="author" placeholder="Author" />
+          <input
+            type="number"
+            id="publishedYear"
+            placeholder="Published Year"
+          />
+          <select id="genre">
+            <option value="Fiction">Fiction</option>
+            <option value="NonFiction">Non-Fiction</option>
+            <option value="Science">Science</option>
+            <option value="History">History</option>
+          </select>
+          <input type="checkbox" id="availability" /> Available
+          <button style="float: right" onclick="addBook()">Submit</button>
+        </div>
+        <button style="float: right" id="exportBtn" onclick="exportToJSON()">
+          Export to JSON
+        </button>
+      </div>
+      <div class="search-books-section">
+        <h2>Search Books</h2>
+        <input type="text" id="searchInput" placeholder="Search by title..." />
+        <button onclick="searchBooks()">Search</button>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Published Year</th>
+              <th>Genre</th>
+              <th>Availability</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="bookList"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./src/labrary.js"></script>
+    <script>
+      displayBooks();
+    </script>
+  </body>
+</html>
